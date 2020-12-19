@@ -43,17 +43,17 @@ def stock_analyze():
     strategy['market']=np.log(strategy['sp500']/strategy['sp500'].shift(1))#Calculate market returns
     strategy[['Market','Strategy']]=strategy[['market','strategy']].cumsum().apply(np.exp)#Calculate the total holding return of market and strategy
 
-    result=['The market holding final return:%s'%strategy['Market'][-1:],
-            'The strategy holding final return:%s'%strategy['Strategy'][-1:],
-            'Average market return：%s'%strategy['Market'].mean(),
-            'Average strategy return：%s'%strategy['Strategy'].mean(),
-            'Maximum strategy return：%s'%strategy['Strategy'].max(),
-            'Maximum market return：%s'%strategy['Market'].max(),
-            'Market maximum pullback in one day：%s'%strategy['market'].min(),
-            'Strategy maximum pullback in one day：%s'%strategy['strategy'].min(),
-            'Strategy volatility：%s'%strategy['Strategy'].std(),
-            'Market volatility：%s'%strategy['Market'].std()]
-    return ("\n".join(result))
+    result=['\n The market holding final return:%s'%strategy['Market'][-1:],
+            '\n The strategy holding final return:%s'%strategy['Strategy'][-1:],
+            '\n Average market return：%s'%strategy['Market'].mean(),
+            '\n Average strategy return：%s'%strategy['Strategy'].mean(),
+            '\n Maximum strategy return：%s'%strategy['Strategy'].max(),
+            '\n Maximum market return：%s'%strategy['Market'].max(),
+            '\n Market maximum pullback in one day：%s'%strategy['market'].min(),
+            '\n Strategy maximum pullback in one day：%s'%strategy['strategy'].min(),
+            '\n Strategy volatility：%s'%strategy['Strategy'].std(),
+            '\n Market volatility：%s'%strategy['Market'].std()]
+    return result
 
 
 @app.route('/')
