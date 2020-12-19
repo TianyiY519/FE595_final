@@ -14,7 +14,7 @@ def stock_analyze():
     company_list = input_text.split(",")
     df=pd.DataFrame()
     for i in company_list:
-        df[i]=pdr.DataReader(i,data_source='yahoo',start='2015/1/1',end='2020/3/31')['Close']#get the close price
+        df[i]=pdr.DataReader(i,data_source='yahoo',start='2018/1/1',end='2020/12/06')['Close']#get the close price
         
         d42=pd.DataFrame()
         d252=pd.DataFrame()
