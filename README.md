@@ -1,5 +1,5 @@
 # FE595_final
-**The website url**:http://18.222.30.7:8000/  
+**The website url**:http://3.137.213.199:8000/  
 This project was suppose to give stock analysis results of the input portfolio.Input must be the ticker symbols.    
 **The analysis index**:   
 The market holding final return  
